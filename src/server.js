@@ -16,5 +16,5 @@ http.createServer(function (request, response) {
     200,
     {'content-type': 'text/html; charset=utf-8'}
   );
-  response.end('<h1>Sejá bem vindo usuario</h1>');
+  response.end('<h1>Sejá bem vindo usuário</h1>');
 }).listen(3000);

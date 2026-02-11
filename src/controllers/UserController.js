@@ -1,3 +1,4 @@
+
 const users = require('../mocks/users');
 
 module.exports = {
@@ -11,7 +12,6 @@ module.exports = {
 }
 
 //Meu codigo
-//const users = require('../mocks/products');
 const products = require('../mocks/products');
 
 module.exports = {

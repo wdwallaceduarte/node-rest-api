@@ -1,3 +1,4 @@
+
 const UserController = require('./controllers/UserController');
 
 module.exports = [{
@@ -12,3 +13,4 @@ module.exports = [{
   endpoint: '/products',
   handler: UserController.getProducts
 }]
+

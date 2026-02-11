@@ -3,7 +3,7 @@ module.exports = [{
   item: 'Luva'
 }, {
   id: 2,
-  item: 'Bandage'
+  item: 'Bandagem'
 }, {
   id: 2,
   item: 'Protetor bucal'
