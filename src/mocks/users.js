@@ -1,4 +1,4 @@
-module.exports = [{
+const users = [{
   id: 1,
   name: 'Wallace Duarte',
   idade: 38,
@@ -14,3 +14,5 @@ module.exports = [{
   idade: 37,
   modalidade: ['Professor', 'Wushu (Tradicional e moderno)', 'Boxing', 'Kickboxing','MMA']
 }];
+
+export default users

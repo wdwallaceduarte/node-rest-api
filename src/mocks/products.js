@@ -1,4 +1,4 @@
-module.exports = [{
+const products = [{
   id: 1,
   item: 'Luva'
 }, {
@@ -8,3 +8,5 @@ module.exports = [{
   id: 2,
   item: 'Protetor bucal'
 }];
+
+export default products

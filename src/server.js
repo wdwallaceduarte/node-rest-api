@@ -1,20 +1,22 @@
-const http = require('node:http');
-const routes = require('./routes');
+import http from 'node:http';
+import url from 'node:url';
+
+import routes from './routes.js';
+import errors from './errors.js';
 
 http.createServer(function (request, response) {
-  
-  const route = routes.find(function (r) {
-    return request.url === r.endpoint;
+
+  const parsed_url = url.parse(request.url, true);
+
+  const router = routes.find(function (route) {
+    return parsed_url.pathname === route.endpoint;
   });
 
-  if (route) {
-    route.handler(response);
+  if (router) {
+    request.query = parsed_url.query;
+    router.handler(request, response);
     return;
   }
 
-  response.writeHead(
-    200,
-    {'content-type': 'text/html; charset=utf-8'}
-  );
-  response.end('<h1>Sejá bem vindo usuário</h1>');
+  errors.notFound(response);
 }).listen(3000);
